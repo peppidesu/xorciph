@@ -26,9 +26,8 @@ struct Cli {
 #[derive(Args)]
 #[group(required = true, multiple = false)]
 struct InputArgs {
-    /// set version manually
     #[arg(long)]
-        /// Provide shellcode from stdin
+    /// Provide shellcode from stdin
     #[arg(short, group = "input")]
     pipe: bool,
     
