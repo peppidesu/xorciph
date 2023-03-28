@@ -18,7 +18,7 @@ struct Cli {
     #[command(flatten)]
     input: InputArgs,
     
-    /// don't format output
+    /// Don't format output
     #[arg(short, long)]
     raw: bool
 }
