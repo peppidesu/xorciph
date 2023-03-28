@@ -1,5 +1,10 @@
 [package]
 name = "xorciph"
+authors = ["Pepijn Bakker (peppidesu)"]
+description = "XOR cipher CLI written in Rust."
+homepage = "https://github.com/peppidesu/xorciph"
+repository = "https://github.com/peppidesu/xorciph"
+license = "APACHE"
 version = "0.2.0"
 edition = "2021"
 
