@@ -5,7 +5,7 @@ description = "XOR cipher CLI written in Rust."
 homepage = "https://github.com/peppidesu/xorciph"
 repository = "https://github.com/peppidesu/xorciph"
 license = "APACHE"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

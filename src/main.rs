@@ -8,7 +8,7 @@ use std::io::Write;
 #[derive(Parser)]
 #[command(name = "xorciph")]
 #[command(author = "Pepijn Bakker (peppidesu)")]
-#[command(version = "0.2.0")]
+#[command(version = "0.2.1")]
 #[command(about = "An XOR cipher CLI written in Rust")]
 struct Cli {        
     /// The key used for the xor cipher 
