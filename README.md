@@ -3,6 +3,17 @@ An XOR cipher CLI written in Rust.
 
 Based on https://github.com/cr-0w/xorcrypt
 
+## Install
+`xorciph` can be installed from the AUR using `makepkg`:
+```
+git clone https://github.com/peppidesu/xorciph
+cd xorciph
+makepkg --install
+```
+or using `yay`:
+```yay install xorciph-bin```
+
+
 ## Usage
 ```
 xorciph [OPTIONS] -k <KEY> -f <FILE>
