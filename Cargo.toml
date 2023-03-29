@@ -5,10 +5,19 @@ description = "XOR cipher CLI written in Rust."
 homepage = "https://github.com/peppidesu/xorciph"
 repository = "https://github.com/peppidesu/xorciph"
 license = "APACHE"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 clap = { version = "4.1.14", features = ["derive"] }
+arrayvec = "0.7.2"
+
+[dev-dependencies]
+criterion = "0.4.0"
+rand = "0.8.5"
+
+[[bench]]
+name = "encrypt_bench"
+harness = false
