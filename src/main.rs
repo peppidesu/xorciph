@@ -5,7 +5,7 @@ use xorciph::lib;
 #[derive(Parser)]
 #[command(name = "xorciph")]
 #[command(author = "Pepijn Bakker (peppidesu)")]
-#[command(version = "0.2.2")]
+#[command(version = "0.3.0")]
 #[command(about = "An XOR cipher CLI written in Rust")]
 struct Cli {        
     /// The key used for the xor cipher 
