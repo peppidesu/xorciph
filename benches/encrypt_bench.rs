@@ -39,7 +39,7 @@ fn encrypt_bench(c: &mut Criterion) {
             let mut rng = rand::thread_rng();
             (generate_random_key(&mut rng, 173), generate_random_shellcode(&mut rng, 2841))
         },
-        |(key, shellcode)| { lib::encrypt_simd(&key, &shellcode); },
+        |(key, shellcode)| { lib::encrypt(&key, &shellcode); },
         criterion::BatchSize::SmallInput
     ));
 
@@ -57,7 +57,7 @@ fn encrypt_bench(c: &mut Criterion) {
             let mut rng = rand::thread_rng();
             (generate_random_key(&mut rng, 3986), generate_random_shellcode(&mut rng, 284172))
         },
-        |(key, shellcode)| { lib::encrypt_simd(&key, &shellcode); },
+        |(key, shellcode)| { lib::encrypt(&key, &shellcode); },
         criterion::BatchSize::SmallInput
     ));
 }

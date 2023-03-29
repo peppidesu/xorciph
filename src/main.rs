@@ -27,11 +27,11 @@ struct Cli {
 #[group(required = true, multiple = false)]
 struct InputArgs {
     #[arg(long)]
-    /// Provide shellcode from stdin
+    /// Provide data from stdin
     #[arg(short, group = "input")]
     pipe: bool,
     
-    /// Provide shellcode from a file
+    /// Provide data from a file
     #[arg(short, long, group = "input")]
     file: Option<String>,
 }
@@ -46,7 +46,7 @@ fn main() {
             lib::read_file_bytes(&cli.input.file.unwrap())
         };
 
-    let result = lib::encrypt_simd(&cli.key, &shellcode);
+    let result = lib::encrypt(&cli.key, &shellcode);
     
     if let Some(path) = cli.output {
         lib::write_bytes_to_file(&result, &path)

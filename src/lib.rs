@@ -19,19 +19,8 @@ pub mod lib {
     pub fn bytes_to_stdout(bytes: &[u8]) -> io::Result<()> {
         io::stdout().write_all(bytes)
     }
-
-    pub fn encrypt(key: &String, shellcode: &[u8]) -> Vec<u8> {
-        let key_length = key.len();    
-        let key_bytes = key.as_bytes();
-        
-        // this is why you want to learn haskell crow <3
-        shellcode.iter() 
-            .enumerate()
-            .map(|(i, b)| b ^ key_bytes[i % key_length])
-            .collect()
-    }
     
-    pub fn encrypt_simd(key: &String, shellcode: &[u8]) -> Vec<u8> {        
+    pub fn encrypt(key: &String, shellcode: &[u8]) -> Vec<u8> {        
         let key_cycles = 1 + (shellcode.len() / key.len());
         let key_bytes = key.as_bytes();
         let key_length = key_bytes.len();
