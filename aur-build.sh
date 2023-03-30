@@ -3,3 +3,4 @@ cargo build --release --target x86_64-pc-windows-gnu
 cp target/x86_64-pc-windows-gnu/release/xorciph.exe bin/
 cargo aur
 mv ./*.tar.gz bin/
+sed -i -e 's/download\/v/download\//g' PKGBUILD
